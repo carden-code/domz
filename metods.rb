@@ -12,3 +12,4 @@ puts "Делитель:"
 delitel = gets.chomp.to_i
 puts "Остаток:"
 delenie(delimoe, delitel)
+puts delenie
