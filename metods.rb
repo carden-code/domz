@@ -1,9 +1,14 @@
+def delenie(delimoe, delitel)
+  ostatok = (delimoe.to_i % delitel.to_i)
+  return ostatok
+end
+
 puts "Деление по модулю"
+
 puts "Делимое:"
-a = gets.chomp.to_i
+delimoe = gets.chomp.to_i
+
 puts "Делитель:"
-b = gets.chomp.to_i
-puts "Делимое:a=#{a}"
-puts "Делитель:b=#{b}"
-puts "форула : a % b"
-puts "Остаток: #{ a % b }"
+delitel = gets.chomp.to_i
+puts "Остаток:"
+delenie(delimoe, delitel)
