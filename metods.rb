@@ -1,6 +1,6 @@
-def delenie(delimoe, delitel)
+def delenie(delimoe = 1, delitel = 1)
   ostatok = (delimoe.to_i % delitel.to_i)
-  return ostatok
+  return ostatok.to_i
 end
 
 puts "Деление по модулю"
