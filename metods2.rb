@@ -1,7 +1,3 @@
-def delenie(delimoe = 1, delitel = 1)
-  ostatok = delimoe % delitel
-  return ostatok
-end
 def del(delimoe, delitel)
   itog = delimoe / delitel
   return itog
