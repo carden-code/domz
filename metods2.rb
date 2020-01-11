@@ -1,23 +1,11 @@
-def del(delimoe, delitel)
-  itog = delimoe / delitel
-  return itog
+def delenie_po_modulu(delimoe, delitel)
+  modul = delimoe / delitel
+  bezostatka = delitel * modul
+  ostatok = delimoe - bezostatka
+  return [modul, bezostatka, ostatok]
 end
-def umnogenie(delitel, ostatok)
-  rezultat = delitel * ostatok
-  return rezultat
-end
-def vichet(delimoe, rezultat)
-  summa = delimoe - rezultat
-  return summa
-end
-puts "Деление по модулю"
-puts "Введите цело положительное число больше 0:"
+puts "Укажите целое положительное число больше 0:"
 delimoe = gets.chomp.to_i
-puts "Делитель:"
+puts "Делитель"
 delitel = gets.chomp.to_i
-itog = del(delimoe, delitel)
-rezultat = umnogenie(itog, delitel)
-puts("Остаток равен: #{delenie(delimoe, delitel)}")
-puts("Модуль числа:#{del(delimoe, delitel)}")
-puts("Число без остатка:#{umnogenie(itog, delitel)}")
-puts("Остаток:#{vichet(delimoe, rezultat)}")
+puts("Модуль числа:#{delenie_po_modulu(delimoe, delitel)[0]}, Число без остатка:#{delenie_po_modulu(delimoe,delitel)[1]}, Остаток:#{delenie_po_modulu(delimoe, delitel)[2]}")
