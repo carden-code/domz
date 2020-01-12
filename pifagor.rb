@@ -1,4 +1,4 @@
-puts "Укажите 3 стороны треугольника"
+puts "Укажите 3 стороны треугольника."
 
 puts "Первая сторона:"
 a = gets.chomp.to_f
@@ -22,7 +22,7 @@ def chekvars(first_leg, second_leg, hypotenuse)
     puts "Треугольник разносторонний."
   end
 
-  puts arr.last**2 == arr.first**2 + arr[1]**2 ? "Треугольник прямоугольный" : "Треугольник не прямоугольный"
+  puts arr.last**2 == arr.first**2 + arr[1]**2 ? "Треугольник прямоугольный." : "Треугольник не прямоугольный."
 end
 
 puts "#{chekvars(a, b, c)}"
