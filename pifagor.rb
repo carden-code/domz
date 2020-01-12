@@ -1,5 +1,5 @@
 puts "Укажите 3 стороны треугольника"
-puts "Первоя сторона:"
+puts "Первая сторона:"
 a = gets.chomp.to_f
 puts "Вторая сторона:"
 b = gets.chomp.to_f
@@ -9,17 +9,14 @@ def chekvars(first_leg, second_leg, hypotenuse)
   arr = [first_leg, second_leg, hypotenuse].sort
   return if arr.include?(0) || arr.min.negative?
 
-  case arr.uniq.size
-  when 1
-    puts "две стороны равны - равносторонний."
-  when 2
-    puts "все стороны равны - равнобедренный."
-  else
-    puts "треугольник разносторонний."
-  end
-   if arr.last**2 == (arr. first**2 + arr[1]**2)
-   puts "треугольник прямоугольный"
-   else
-   end
+ case arr.uniq.size
+ when 1
+   puts "Две стороны равны - равносторонний."
+ when 2
+   puts "Все стороны равны - равнобедренный."
+ else
+   puts "Треугольник разносторонний."
+ end
+ puts arr.last**2 == (arr.first**2 + arr[1]**2) ? "Треугольник прямоугольный" : "Треугольник не прямоугольный"
 end
 puts "#{chekvars(a, b, c)}"
