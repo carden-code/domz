@@ -15,9 +15,9 @@ def chekvars(first_leg, second_leg, hypotenuse)
 
   case arr.uniq.size
   when 1
-    puts "Две стороны равны - равносторонний."
+    puts "Две стороны равны - равнобедренный."
   when 2
-    puts "Все стороны равны - равнобедренный."
+    puts "Все стороны равны - равносторонний."
   else
     puts "Треугольник разносторонний."
   end
