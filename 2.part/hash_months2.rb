@@ -3,6 +3,5 @@ hash = { 'january' => 31, 'february' => 29, 'march' => 31,
          'july' => 31, 'august' => 31, 'september' => 30,
          'october' => 31, 'november' => 30, 'december' => 31 }
 hash.each do |month, day|
-  puts "#{month}: #{day}" if day == 30
-  puts "#{month}: #{day}" if day == 29
+  puts "#{month}: #{day}" if [day].include?(29) || [day].include?(30)
 end
