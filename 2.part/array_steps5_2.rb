@@ -1,6 +1,4 @@
 a = (10..100).to_a
 product = []
-a.each do |x|
-  product.push x if (x % 5).zero?
-end
+a.each { |x| product.push x if (x % 5).zero? }
 puts "array in increments of 5:#{product}"
