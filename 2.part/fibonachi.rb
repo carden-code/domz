@@ -4,4 +4,4 @@ while next_element <= 100
   fibonacci << next_element
   next_element = fibonacci[-1] + fibonacci[-2]
 end
-puts fibonacci
+puts "#{fibonacci}"
