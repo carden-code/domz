@@ -4,7 +4,9 @@ alphabet = ('a'..'z').to_a
 vowels = %w[a e i o u]
 consonants = %w[w c d f g h j k l m n p q r s t v w x y z]
 v = {}
+c = {}
 alphabet.each_with_index do |x, i|
   v[i + 1] = x if vowels.include? x
+  c[i + 1] = x if consonants.include? x
 end
-puts gets.chomp == 'v' ? "vowels: #{v}" : "consonants: #{consonants}"
+puts gets.chomp == 'v' ? "vowels: #{v}" : "consonants: #{c}"
