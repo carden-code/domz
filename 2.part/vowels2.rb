@@ -3,10 +3,9 @@ puts 'v - vowels; c - consonants.'
 alphabet = ('a'..'z').to_a
 vowels = %w[a e i o u]
 consonants = %w[w c d f g h j k l m n p q r s t v w x y z]
+gets.chomp == 'v' ? l = vowels : l = consonants
 v = {}
-c = {}
 alphabet.each_with_index do |x, i|
-  v[i + 1] = x if vowels.include? x
-  c[i + 1] = x if consonants.include? x
+  v[i + 1] = x if l.include? x
 end
-puts gets.chomp == 'v' ? "vowels: #{v}" : "consonants: #{c}"
+puts "#{v}"
