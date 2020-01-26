@@ -15,4 +15,14 @@ puts "The date you entered: #{day}.#{month}.#{year}"
 def leap?(year)
   ((year % 4).zero? && year % 100 != 0) || (year % 400).zero?
 end
+leap = leap?(year)
+puts leap
 # end of second part of code
+
+# beginning of the third part of the code
+# the third part of the program using the method finds the serial number
+# of the date starting from the beginning of the year.
+def day_number_of_the_year(day, month, leap)
+days = { 1 => 31, 2 => 28, 3 => 31, 4 => 30, 5 => 31, 6 => 30, 7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31 }
+
+end
