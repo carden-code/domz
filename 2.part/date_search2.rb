@@ -5,5 +5,5 @@ puts 'Please enter the month number:'
 month = gets.chomp.to_i
 puts 'Please enter the year:'
 year = gets.chomp.to_i
-# end of first part of code
 puts "The date you entered: #{day}.#{month}.#{year}"
+# end of first part of code
