@@ -1,6 +1,6 @@
-puts 'Please enter the day:'
+puts 'Please enter the day of the month:'
 day = gets.chomp.to_i
-puts 'please enter the month number:'
+puts 'Please enter the month number:'
 month = gets.chomp.to_i
 puts 'Please enter the year:'
 year = gets.chomp.to_i
@@ -13,4 +13,4 @@ def whole_d(year, day, month)
   end
   puts sum + day
 end
-puts "#{whole_d(year, day, month)} - day since the beginning of the year"
+puts "#{whole_d(year, day, month)} - day since the beginning of the year."
