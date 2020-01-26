@@ -1,6 +1,6 @@
-puts 'Please enter the day (1 - 31):'
+puts 'Please enter the day:'
 day = gets.chomp.to_i
-puts 'Please enter a month (1 - 12):'
+puts 'please enter the month number:'
 month = gets.chomp.to_i
 puts 'Please enter the year:'
 year = gets.chomp.to_i
