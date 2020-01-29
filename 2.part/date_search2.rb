@@ -25,9 +25,17 @@ puts leap
 def day_number_of_the_year(day, month, leap)
 days_amount_in_month = { 1 => 31, 2 => 28, 3 => 31, 4 => 30, 5 => 31, 6 => 30,
                          7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31 }
+if leap == true
+  days_amount_in_month[2] = 29
+end
 
 var = 1
-until var == (month - 1) do
+until var == (month - 1)
   puts var
   var += 1
 end
+puts day + var
+end
+puts "s#{day_number_of_the_year(day, month, leap)}"
+# НЕ понимаю. Посмотрел я видео на Ютюб про циклы. Ничего схожего не увидел.
+# зачем мы делали этот var = 1 и дальше этот цикл вообще не доходит...
