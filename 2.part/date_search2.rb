@@ -22,20 +22,27 @@ puts leap
 # beginning of the third part of the code
 # the third part of the program using the method finds the serial number
 # of the date starting from the beginning of the year.
-def day_number_of_the_year(day, month, leap)
-days_amount_in_month = { 1 => 31, 2 => 28, 3 => 31, 4 => 30, 5 => 31, 6 => 30,
-                         7 => 31, 8 => 31, 9 => 30, 10 => 31, 11 => 30, 12 => 31 }
-if leap == true
-  days_amount_in_month[2] = 29
+def getting_hash_number_days_in_months(year)
+  days_amount_in_month = { 1 => 31, 2 => 28, 3 => 31, 4 => 30,
+                           5 => 31, 6 => 30,7 => 31, 8 => 31,
+                           9 => 30, 10 => 31, 11 => 30, 12 => 31 }
+  if leap?(year)
+    days_amount_in_month[2] = 29
+  end
+  days_amount_in_month
 end
 
-var = 1
-until var == (month - 1)
-  puts var
-  var += 1
+hash_number_days_in_months = getting_hash_number_days_in_months(year)
+puts "hash_number_days_in_months: #{hash_number_days_in_months}"
+
+def day_number_of_the_year(day, month, hash_number_days_in_months)
+  var = 0
+  if month > 1
+    for i in 1...month
+      puts "var: #{i}, hash_number_days_in_months[var]; #{hash_number_days_in_months[i]}"
+      var += hash_number_days_in_months[i]
+    end
+  end
+  day + var
 end
-puts day + var
-end
-puts "s#{day_number_of_the_year(day, month, leap)}"
-# НЕ понимаю. Посмотрел я видео на Ютюб про циклы. Ничего схожего не увидел.
-# зачем мы делали этот var = 1 и дальше этот цикл вообще не доходит...
+puts "day_number_of_the_year: #{day_number_of_the_year(day, month, hash_number_days_in_months)}"
