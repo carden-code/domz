@@ -1,6 +1,6 @@
-arr = (1..20).to_a
+r = 1..20
 puts 'Enter a positive integer to search for it in the array.'
-number = gets.chomp.to_i
+num = gets.chomp.to_i
 result = false
-arr.each { |element| result = true if number == element }
+r.each { |elem| result = true if num == elem }
 puts result == true ? 'The number is in the array.' : 'The number is missing.'
