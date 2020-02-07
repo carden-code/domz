@@ -1,9 +1,10 @@
 product_name = []
 unit_price = []
 quantity_of_goods = []
+hash = { product_name => { unit_price => quantity_of_goods } }
 user_input = nil
 puts 'Введите пожалуйста данны о товаре(Название, Стоимость, Колличество)'
-while user_input != 'stop' do
+while user_input != 'stop'
   puts 'Введите пожалуйста название товара'
   user_input = gets.chomp
   product_name << user_input
@@ -18,3 +19,4 @@ while user_input != 'stop' do
 end
 puts "Названия товаров#{product_name}, Стоимость товаров за штуку#{unit_price},
 Колличество товаров#{quantity_of_goods}"
+puts "#{hash}"
