@@ -1,22 +1,22 @@
-product_name = []
-unit_price = []
-quantity_of_goods = []
-hash = { product_name => { unit_price => quantity_of_goods } }
+h = {}
+sum_of_products = 0
 user_input = nil
-puts 'Введите пожалуйста данны о товаре(Название, Стоимость, Колличество)'
+puts 'Please enter product details (Name, Cost, Quantity)'
 while user_input != 'stop'
-  puts 'Введите пожалуйста название товара'
+  puts 'Please enter a product name:'
+  product = gets.chomp.to_s.capitalize
+  puts 'Please enter the price of the goods:'
+  unit_price = gets.chomp.to_f
+  puts 'Please enter the quantity of goods:'
+  quantity_of_goods = gets.chomp.to_f
+  puts 'If there are no more products, enter “Stop”, if there is, press “Enter”'
   user_input = gets.chomp
-  product_name << user_input
-  puts 'Введите пожалуйста стоимость товара'
-  user_input = gets.chomp.to_f
-  unit_price << user_input
-  puts 'Введите пожалуйста количество товара'
-  user_input = gets.chomp.to_f
-  quantity_of_goods << user_input
-  puts 'Если товаров больше нет введите "stop" если есть нажмите "Enter"'
-  user_input = gets.chomp
+  h[product] = { unit_price: unit_price, quantity_of_goods: quantity_of_goods }
 end
-puts "Названия товаров#{product_name}, Стоимость товаров за штуку#{unit_price},
-Колличество товаров#{quantity_of_goods}"
-puts "#{hash}"
+puts "Cart with goods: #{h}"
+h.each do |name, value|
+  print "The total amount for the product: #{name} - "
+  puts total = (value[:unit_price] * value[:quantity_of_goods]).round(1)
+  sum_of_products += total
+end
+puts "The total amount of all products in the basket: #{sum_of_products}"
