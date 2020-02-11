@@ -21,7 +21,7 @@ end
 puts "Cart with goods: #{h}"
 h.each do |name, value|
   print "The total amount for the product: #{name} - "
-  puts total = (value[:unit_price] * value[:quantity_of_goods]).round(1)
+  puts total = (value[:unit_price] * value[:quantity_of_goods])
   sum_of_products += total
 end
 puts "The total amount of all products in the basket: #{sum_of_products}"
