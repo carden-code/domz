@@ -4,12 +4,12 @@ user_input = nil
 puts 'Please enter product details (Name, Cost, Quantity)'
 while user_input != 'stop'
   puts 'Please enter a product name:'
-  product = gets.chomp.to_s.capitalize
+  product = gets.chomp.to_s
   puts 'Please enter the price of the goods:'
   unit_price = gets.chomp.to_f
   puts 'Please enter the quantity of goods:'
   quantity_of_goods = gets.chomp.to_f
-  puts 'If there are no more products, enter “Stop”, if there is, press “Enter”'
+  puts 'If there are no more products, enter “stop”, if there is, press “Enter”'
   user_input = gets.chomp
   h[product] = { unit_price: unit_price, quantity_of_goods: quantity_of_goods }
 end
