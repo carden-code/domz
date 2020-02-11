@@ -1,12 +1,17 @@
 h = {}
 sum_of_products = 0
 user_input = nil
+# A cycle is used to enter product parameters
+# after entering each parameter (Product Name, Cost, Quantity)
+# press "Enter" to go to the input of the next parameter.
+# after entering 3 parameters - the loop asks if you want to continue entering?
+# if yes then press "Enter" if not write in the line 'stop'.
 puts 'Please enter product details (Name, Cost, Quantity)'
 while user_input != 'stop'
   puts 'Please enter a product name:'
-  product = gets.chomp.to_s
+  product = gets.chomp
   puts 'Please enter the price of the goods:'
-  unit_price = gets.chomp.to_f
+  unit_price = gets.chomp.to_i
   puts 'Please enter the quantity of goods:'
   quantity_of_goods = gets.chomp.to_f
   puts 'If there are no more products, enter “stop”, if there is, press “Enter”'
