@@ -5,5 +5,5 @@ array.each_with_index do |element, index|
   ar = (index % 2).zero? ? even : odd
   ar << element
 end
-p odd
 p even
+p odd
