@@ -3,6 +3,6 @@ hash = { 'january' => 31, 'february' => 29, 'march' => 31,
          'july' => 31, 'august' => 31, 'september' => 30,
          'october' => 31, 'november' => 30, 'december' => 31 }
 hash.each do |month, day|
-  puts "#{month}: #{day}"
-  puts day % 2 == 0 ? "even" : "odd"
+  print "#{month}: #{day}"
+  puts day % 2 == 0 ? ' - even' : ' - odd'
 end
