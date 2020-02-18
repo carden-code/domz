@@ -4,7 +4,7 @@
 a = [2, 1, 2, -2, 0, 4, 9, 8]
 product = a.each_with_index do |_, i|
   if i > 0 && i < a.size - 1
-    a[i] *= a.first + a.last if a[i].even?
+    a[i] *= a.first + a.last if a[i].odd?
   end
 end
 puts "Modified array : #{product}"
