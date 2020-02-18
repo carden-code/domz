@@ -1,10 +1,5 @@
-# The program converts the array and multiplies the even elements
-# by the sum of the first and last elements of the array.
-# The first and last element of the array remains unchanged.
+# The program converts an array and multiplies odd elements
+# the sum of the first and last element of the array.
 a = [2, 1, 2, -2, 0, 4, 9, 8]
-product = a.each_with_index do |_, i|
-  if i > 0 && i < a.size - 1
-    a[i] *= a.first + a.last if a[i].odd?
-  end
-end
+product = a.each_with_index { |_, i| a[i] *= a.first + a.last if a[i].odd? }
 puts "Modified array : #{product}"
