@@ -6,4 +6,4 @@ product = a.each_with_index do |_, i|
     a[i] += a.first if a[i].even?
   end
 end
-puts product
+puts "Modified array : #{product}"
