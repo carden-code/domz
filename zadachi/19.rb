@@ -1,4 +1,5 @@
-a = [1, 4, 2, 4, 6, 7, -1, 0, 22]
-m = []
-a.each_with_index { |_, i| m << a[i] if a[i - 1] > a[i] && a[i + 1] > a[i] }
-puts "Number of local minima : #{m.size}"
+# The program loops through the array and determines the number of local minima.
+arr = [1, 4, 2, 4, 6, 7, -1, 0, 22]
+min = []
+arr.each_with_index { |_, i| min << arr[i] if arr[i] <= arr[i - 1] }
+puts "Number of local minima : #{min.size} - #{min}"
