@@ -1,4 +1,4 @@
-a = [1, 4, 2, 4, 6, 7, -1, 0, 22]
-m = []
-a.each_with_index { |_, i| m << a[i] if a[i + 1] < a[i] && a[i - 1] < a[i] }
-puts "Number of local minima : #{m}"
+arr = [1, 4, 2, 4, 6, 7, -1, 0, 22]
+max = []
+arr.each_with_index { |_, i| max << arr[i] if arr[i - 1] <= arr[i] }
+puts "The number of local maxima : #{max.size} - #{max}"
